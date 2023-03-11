@@ -6,5 +6,7 @@ class StoreModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)
-    #Item model object
+
+    #Item model object Many to one (Una tienda tiene varias Tags y varios Items)
     items = db.relationship("ItemModel", back_populates="store", lazy="dynamic", cascade="all, delete")
+    tags = db.relationship("TagModel", back_populates="store", lazy="dynamic")
