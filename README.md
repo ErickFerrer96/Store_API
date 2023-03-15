@@ -1,5 +1,7 @@
 # Store_API
 
+This is a personal project for learning how to create APIs with python in flask.
+
 ## Installation of libraries
 ```python
  pip install -r requirements.txt
